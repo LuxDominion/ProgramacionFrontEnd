@@ -8,6 +8,7 @@
 body {
     background-color: #e0e0e0; /* Color gris de fondo para que la hoja resalte */
     margin: 0; /* Elimina el margen por defecto del navegador */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografía profesional */
     padding: 40px 0; /* Espacio arriba y abajo para que la hoja no toque los bordes */
     display: flex; /* Activa el modo de caja flexible para alinear contenido */
     justify-content: center; /* Centra la hoja horizontalmente en la pantalla */
@@ -143,7 +144,7 @@ body {
 }
 
 .bloque_experiencia {
-    margin-bottom: 20px; /* Espacio entre cada trabajo/estudio */
+    margin-bottom: 20px; 
 }
 
 .bloque_experiencia h4 {

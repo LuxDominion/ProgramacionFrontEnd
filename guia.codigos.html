@@ -1,0 +1,171 @@
+
+ESQUELETO DE HTML Y CSS PARA CURRICULUM VITAE CODIGO DE REFERENCIA 
+
+1. Estructura Básica (El "esqueleto")
+Todo archivo HTML debe tener estas etiquetas para ser válido:
+
+<!DOCTYPE html>: Define que el documento es HTML5.
+
+<html>: El contenedor principal de toda la página.
+
+<head>: Contiene información invisible para el usuario (como el título de la pestaña o enlaces a CSS).
+
+<body>: Contiene todo lo que el usuario sí puede ver.
+
+
+
+
+
+
+
+
+
+2. Títulos y Párrafos (Texto)
+
+<h1> hasta <h6>: Títulos. El <h1> es el más importante (el título principal) y el <h6> el más pequeño.
+
+<p>: Define un párrafo de texto.
+
+<br>: Crea un salto de línea simple.
+
+<strong>: Pone el texto en negrita (indica importancia).
+
+<em>: Pone el texto en cursiva (indica énfasis).
+
+
+
+
+3. Contenedores (Para organizar el diseño)
+
+<div>: Un contenedor genérico para agrupar secciones (muy usado con CSS).
+
+<header>: El encabezado de una sección o de la página.
+
+<footer>: El pie de página.
+
+<section>: Define una sección temática en el documento.
+
+<main>: El contenido principal y único de la página.
+
+
+
+
+
+
+4. Listas
+
+<ul>: Lista desordenada (con puntos/viñetas).
+
+<ol>: Lista ordenada (con números).
+
+<li>: Cada uno de los elementos dentro de la lista.
+
+
+
+
+
+
+
+5. Enlaces e Imágenes
+
+<a href="url">: Crea un enlace a otra página o archivo.
+
+<img src="ruta" alt="descripcion">: Inserta una imagen. El alt es el texto que aparece si la imagen no carga.
+
+
+
+
+
+
+
+6. Tablas (Muy útiles para datos)
+
+<table>: El contenedor de la tabla.
+
+<tr>: Una fila de la tabla.
+
+<th>: Una celda de encabezado (el texto sale en negrita).
+
+<td>: Una celda de datos normal.
+
+7. Atributos de Identificación (Lo que conecta HTML con CSS)
+
+Estos no son etiquetas, sino "apellidos" que les pones a las etiquetas para que el CSS sepa a quién darle estilo:
+
+id="nombre": Se usa para identificar un elemento único en la página (como #hoja_cv o #foto_perfil). Solo puede haber uno con ese nombre.
+
+class="nombre": Se usa para identificar un grupo de elementos que quieres que se vean igual (como .titulo_lateral o .lista_puntos). Puedes usar la misma clase muchas veces.
+
+
+
+
+
+
+8. Enlaces Externos (En el <head>)
+
+<link rel="stylesheet" href="...">: Esta es fundamental. Sirve para "llamar" a tu archivo de CSS o a librerías externas (como los iconos de Bootstrap). Si no pones esto, tu HTML no tendrá colores ni orden.
+
+
+
+
+9. Etiquetas de Formato y Visualización
+
+<span>: Es como el <div>, pero se usa para trozos de texto pequeños dentro de un párrafo. Sirve para darle un color o estilo a una sola palabra sin romper la línea.
+
+<i>: Se usa tradicionalmente para cursivas, pero hoy en día la usamos casi siempre para insertar iconos (como los que pusiste en el pie de página).
+
+
+
+
+
+
+
+10. Atributos de Imagen (Detalles importantes)
+
+En tu etiqueta <img ...>, hay otros atributos que podrías estar usando:
+
+width y height: Para definir el tamaño directamente en el HTML (aunque es mejor hacerlo en CSS).
+
+title: Es el texto que sale en un globito cuando dejas el mouse encima de la foto.
+
+
+
+
+1. Medidas de Tamaño
+
+width (Ancho): Define qué tan ancha es una caja. En tu #hoja_cv lo pusiste en 850px para que parezca una hoja real.
+
+height (Alto): Define la altura fija.
+
+min-height (Altura mínima): Es muy útil. Le dice a la hoja: "Mide al menos 1200px, pero si tengo mucho texto, estírate más". Así el contenido nunca se sale de la hoja.
+
+
+
+2. Ubicación y Espacios (Cajas)
+
+padding (Espacio interno): Es el aire que hay dentro de la caja. Sirve para que el texto no toque los bordes.
+
+margin (Espacio externo): Es el espacio fuera de la caja. Sirve para separar una sección de otra.
+
+box-sizing: border-box;: Esta es técnica pero importante. Hace que el padding no "infle" el tamaño de la caja. Si dices que mide 100px, medirá 100px exactos aunque le pongas mucho padding.
+
+
+
+
+3. Posicionamiento (Dónde va cada cosa)
+
+position: relative;: Se le pone al contenedor (la hoja). Es como decir: "Esta es el área de juego".
+
+position: absolute;: Se le pone a la foto. Permite moverla con coordenadas exactas (top y left) ignorando a los demás elementos.
+
+top / bottom / left / right: Son las coordenadas para mover elementos que tienen position: absolute.
+
+
+
+
+
+4. Detalles de la Foto
+
+border-radius: 50%;: Convierte cualquier cuadrado en un círculo perfecto.
+
+object-fit: cover;: Es fundamental para fotos de perfil. Si la foto es rectangular, la recorta para que llene el círculo sin verse "aplastada" o estirada.
